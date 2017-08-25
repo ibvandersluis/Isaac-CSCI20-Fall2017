@@ -5,3 +5,5 @@ if guess is higher than number, say "Guess Lower" and return to step 2
 if guess is lower than number, say "Guess Higher" and return to step 2
 if guess is not between 1 and 50, say "Sorry, you must guess a valid number"
 if user does not guess number after 10 attempts, say "Game Over. Try again?"
+
+try this
