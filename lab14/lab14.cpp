@@ -12,7 +12,7 @@ using namespace std;
 
 int main()
 {
-    int input_cents = 0;
+    int input_cents = 0;                                        //Initializing the key variables I will be using
     int num_quarters = 0;
     int num_dimes = 0;
     int num_nickels = 0;
@@ -21,10 +21,10 @@ int main()
     cout << "Enter total value of coins, in cents: " << endl;
     cin >> input_cents;
     
-    double service_fee = input_cents * (0.109);
-    int voucher = input_cents - service_fee;
+    double service_fee = input_cents * (0.109);                 //Calculating service fee as 10.9% of the amount received
+    int voucher = input_cents - service_fee;                    //Determining amount user receives back as a voucher
     
-    num_quarters = input_cents / 25;
+    num_quarters = input_cents / 25;                            //Determines coin denomonations and quantities received, starting with the largest first
     num_dimes = (input_cents - (num_quarters * 25)) / 10;
     num_nickels = (input_cents - (num_quarters * 25) - (num_dimes * 10)) / 5;
     num_pennies = input_cents % 5;
