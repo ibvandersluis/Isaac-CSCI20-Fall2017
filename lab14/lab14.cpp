@@ -25,7 +25,7 @@ int main()
     int voucher = input_cents - service_fee;
     
     num_quarters = input_cents / 25;
-    num_dimes = (input_cents % 25) / 10;
+    num_dimes = (input_cents - (num_quarters * 25)) / 10;
     num_nickels = (input_cents - (num_quarters * 25) - (num_dimes * 10)) / 5;
     num_pennies = input_cents % 5;
     
