@@ -31,7 +31,7 @@ int main()
     getline(cin, noun);
     cout << "Enter an adverb: " << endl;
     getline(cin, adverb);
-                                                //outputting the mad lib with variables replacing missing words
+                                                //outputting the Mad Lib with variables replacing missing words
     cout << "I awoke to the " << element << " alarm in my suit. A steady, obnoxious " << present_verb << endl;
     cout << "that eventually roused me from a deep and profound desire to just " << endl;
     cout << "fucking die. The " << natural_disaster << " had abated. I was facedown, almost totally buried " << endl;
