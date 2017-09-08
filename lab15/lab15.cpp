@@ -37,5 +37,21 @@ int main()
     cout << "fucking die. The " << natural_disaster << " had abated. I was facedown, almost totally buried " << endl;
     cout << "in " << noun << ". As I " << adverb << " came to, I wondered why I wasn’t more dead." << endl;
     
+    /*  Enter an element: 
+        potassium
+        Enter a verb in the present tense: 
+        popping
+        Enter a natural disaster or intense weather condition: 
+        tsunami
+        Enter a noun: 
+        peacock
+        Enter an adverb: 
+        awkwardly
+        I awoke to the potassium alarm in my suit. A steady, obnoxious popping
+        that eventually roused me from a deep and profound desire to just 
+        fucking die. The tsunami had abated. I was facedown, almost totally buried 
+        in peacock. As I awkwardly came to, I wondered why I wasn’t more dead.
+    */
+    
     return 0;
 }
