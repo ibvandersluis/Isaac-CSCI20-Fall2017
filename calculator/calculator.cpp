@@ -19,16 +19,37 @@ using namespace std;
 
 int main()
 {
-    string employeeName = "";      //These variables are flexible and will be
-    int hourlyPay = 0;          //given values by the user.
-    int hoursWorked = 0;
-    int insuranceCost = 0;
-    int startOdometer = 0;
-    int endOdometer = 0;
+    string employee_name = "";                  //These variables are flexible and will be
+    double hourly_pay = 0;                      //given values by the user.
+    double hours_worked = 0;
+    double insurance_cost = 0;
+    double start_odometer = 0;
+    double end_odometer = 0;
+    double gross_wage = 0;
     
-    int taxPercent = 17;        //These variables are constant.
-    int milesRate = 0.35;
-    int netPay = hourlyPay * hoursWorked;
-    int milesTraveled = endOdometer - startOdometer;
-    int travelReimbursement = milesTraveled * milesRate;
+                                                //Getting info from user
+    cout << "Enter the employee's first and last name: " << endl;
+    getline(cin, employee_name);
+    cout << "Enter " << employee_name <<"'s hourly wage: " << endl;
+    cin >> hourly_pay;
+    cout << "Enter the number of hours " << employee_name << " works in a week: " << endl;
+    cin >> hours_worked;
+    cout << "Enter " << employee_name << "'s cost of insurance: " << endl;
+    cin >> insurance_cost;
+    cout << "Enter " << employee_name << "'s starting odometer: " << endl;
+    cin >> start_odometer;
+    cout << "Enter " << employee_name << "'s ending odometer: " << endl;
+    cin >> end_odometer;
+    
+    const double tax_percent = 0.17;            //These variables are constant, or based on constants
+    const double miles_rate = 0.35;
+    double net_pay = hourly_pay * hours_worked;
+    double miles_traveled = end_odometer - start_odometer;
+    double travel_reimbursement = miles_traveled * miles_rate;
+    
+    cout << endl << endl << endl << "~~~WEEKLY PAY STUB~~~" << endl;
+    cout << "EMPLOYEE: " << employee_name << endl;
+    cout << "NET PAY: $" << net_pay << endl;
+    
+    return 0;
 }
