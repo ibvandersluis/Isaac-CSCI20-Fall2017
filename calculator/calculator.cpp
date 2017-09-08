@@ -19,7 +19,7 @@ using namespace std;
 
 int main()
 {
-    str employeeName = "";      //These variables are flexible and will be
+    string employeeName = "";      //These variables are flexible and will be
     int hourlyPay = 0;          //given values by the user.
     int hoursWorked = 0;
     int insuranceCost = 0;
