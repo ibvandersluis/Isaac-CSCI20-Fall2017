@@ -9,4 +9,6 @@ int main()      //the main function starts here
 {
     cout<<"Hello "<<"World!"<<endl;  //Prints 'hello world'
     cout<<"Hello "<<"Isaac!"<<endl;
+    
+    return 0;
 }
