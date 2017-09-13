@@ -17,7 +17,7 @@
 #include <string>
 using namespace std;
 
-struct Portfolio {
+struct Stock {     //Declaring struct to hold data for each instance of Stock
     string stock_name;
     char stock_sector;
     double stock_value;
@@ -26,7 +26,7 @@ struct Portfolio {
 };
 
 int main() {
-    Portfolio stock1;  //Initialiezes new instance of object with type Portfolio
+    Stock stock1;  //Initialiezes new instance of object with type Portfolio
     
     cout << "Enter information for stock 1..." << endl; //Get info for stock1 from user
     cout << "Enter stock name: " << endl;
@@ -44,7 +44,7 @@ int main() {
     
     //-----------------------------------------------------
     
-    Portfolio stock2;  //Initialiezes new instance of object with type Portfolio
+    Stock stock2;  //Initialiezes new instance of object with type Portfolio
     
     cout << "Enter information for stock 2..." << endl; //Get info for stock2 from user
     cout << "Enter stock name: " << endl; 
@@ -62,7 +62,7 @@ int main() {
     
     //-----------------------------------------------------
     
-    Portfolio stock3;  //Initialiezes new instance of object with type Portfolio
+    Stock stock3;  //Initialiezes new instance of object with type Portfolio
     
     cout << "Enter information for stock 3..." << endl; //Get info from stock3 from user
     cout << "Enter stock name: " << endl; 
@@ -80,7 +80,7 @@ int main() {
     
     //-----------------------------------------------------
     
-    Portfolio stock4;  //Initialiezes new instance of object with type Portfolio
+    Stock stock4;  //Initialiezes new instance of object with type Portfolio
     
     cout << "Enter information for stock 4..." << endl; //Get info from stock4 from user
     cout << "Enter stock name: " << endl; 
@@ -98,7 +98,7 @@ int main() {
     
     //-----------------------------------------------------
     
-    Portfolio stock5;  //Initialiezes new instance of object with type Portfolio
+    Stock stock5;  //Initialiezes new instance of object with type Portfolio
     
     cout << "Enter information for stock 5..." << endl; //Get info from stock5 from user
     cout << "Enter stock name: " << endl; 
@@ -116,7 +116,7 @@ int main() {
     
     //-----------------------------------------------------
     
-    Portfolio stock6;  //Initialiezes new instance of object with type Portfolio
+    Stock stock6;  //Initialiezes new instance of object with type Portfolio
     
     cout << "Enter information for stock 6..." << endl; //Get info from stock6 from user
     cout << "Enter stock name: " << endl; 
