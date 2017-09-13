@@ -17,8 +17,7 @@
 #include <string>
 using namespace std;
 
-int main()
-{
+int main() {
     string employee_name = "";                  //These variables are flexible and will be
     double hourly_pay = 0;                      //given values by the user.
     double hours_worked = 0;
@@ -41,8 +40,8 @@ int main()
     cout << "Enter " << employee_name << "'s ending odometer: " << endl;
     cin >> end_odometer;
     
-    const double tax_percent = 0.17;            //These variables are constant, or based on constants
-    const double miles_rate = 0.35;
+    const double TAX_PERCENTAGE = 0.17;            //These variables are constant, or based on constants
+    const double MILES_RATE = 0.35;
     double net_pay = hourly_pay * hours_worked;
     double miles_traveled = end_odometer - start_odometer;
     double travel_reimbursement = miles_traveled * miles_rate;
