@@ -24,7 +24,6 @@ int main() {
     double insurance_cost = 0;
     double start_odometer = 0;
     double end_odometer = 0;
-    double gross_wage = 0;
     
                                                 //Getting info from user
     cout << "Enter the employee's first and last name: " << endl;
