@@ -57,6 +57,8 @@ int main() {
     cout << "HOURS WORKED: " << employee1.hours_worked << endl;
     cout << "HOURLY WAGE: $" << employee1.hourly_pay << endl;
     cout << "GROSS PAY: $" << gross_pay << endl;
+    cout << "TAXES PAID: $" << tax_deduction << endl;
+    cout << "INSURANCE PAID: $" << employee1.insurance_cost << endl;
     cout << "NET PAY: $" << net_pay << endl;
     cout << "REIMBURSEMENT: $" << travel_reimbursement << endl;
     cout << "***********************" << endl;
@@ -70,6 +72,8 @@ int main() {
    HOURS WORKED: 40
    HOURLY WAGE: $23.57
    GROSS PAY: $942.8
+   TAXES PAID: $129.906
+   INSURANCE PAID: $178.65
    NET PAY: $634.245
    REIMBURSEMENT: $310.1
    ***********************
@@ -80,7 +84,9 @@ int main() {
    HOURS WORKED: 29
    HOURLY WAGE: $11.5
    GROSS PAY: $333.5
-   NET PAY: $-9.1881  (That's right, poor Richard didn't make enough money to pay for insurance. His taxes gave him money back)
+   TAXES PAID: $-1.8819
+   INSURANCE PAID: $344.57
+   NET PAY: $-9.1881
    REIMBURSEMENT: $328.3
    ***********************
    TOTAL PAY: $319.112
@@ -90,6 +96,8 @@ int main() {
    HOURS WORKED: 35
    HOURLY WAGE: $60
    GROSS PAY: $2100
+   TAXES PAID: $318.793
+   INSURANCE PAID: $224.75
    NET PAY: $1556.46
    REIMBURSEMENT: $0
    ***********************
@@ -100,6 +108,8 @@ int main() {
    HOURS WORKED: 40
    HOURLY WAGE: $8.25
    GROSS PAY: $330
+   TAXES PAID: $25.4541
+   INSURANCE PAID: $180.27
    NET PAY: $124.276
    REIMBURSEMENT: $79.45
    ***********************
