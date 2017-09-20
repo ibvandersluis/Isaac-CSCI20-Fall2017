@@ -6,13 +6,15 @@
     not for saving long projects. Pushed to git.
 */
 
-#include <iostream>
-using namespace std;
+/* exp example */
+#include <stdio.h>      /* printf */
+#include <math.h>       /* exp */
 
-int main()
+int main ()
 {
-    int i = 8;
-int j = 10;
-int k = i/j;
-cout<<k;
+  double param, result;
+  param = 5.0;
+  result = exp ();
+  printf ("The exponential value of %f is %f.\n", param, result );
+  return 0;
 }
