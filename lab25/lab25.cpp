@@ -89,7 +89,7 @@ int main() {
     cin >> user_int;
     book1.SetCopyright(user_int);
     cout << "You entered '" << book1.GetCopyright() << "' as the copyright." << endl << endl;
-    cin.ignore(1); //ignores the \n char left over from the getline() function
+    cin.ignore(1); //ignores the \n char left over previous cin >> user_int
     
     cout << "Book Two" << endl << "Enter title: " << endl;
     getline(cin, user_string);
