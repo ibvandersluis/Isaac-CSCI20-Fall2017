@@ -4,7 +4,7 @@
 /* ~~~~Phone Plan Calculator~~~~
    This program takes the amount of data, number of lines, and number of tablets
    from the user and compare each plan to determine which is cheapest.
-   The program then ouputs the best option to the user.
+   The program then ouputs the best option to the user...
 */
 
 #include <iostream>
