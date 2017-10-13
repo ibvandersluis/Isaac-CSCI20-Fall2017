@@ -127,7 +127,7 @@ int main() {
     sprint_unlimited = SprintUnlim(data_gb, num_lines, num_tablets);
     sprint_2g = Sprint2GB(data_gb, num_lines, num_tablets);
     
-    //[rinting info back to user
+    //printing info back to user
     if ((att_unlimited_choice < att_family_plan) && (att_unlimited_choice < verizon_unlimited) && (att_unlimited_choice < sprint_unlimited) && (att_unlimited_choice < sprint_2g)) {
         cout << "It looks like the AT&T Unlimited Choice Plan is the best for you." << endl;
     } else if ((att_family_plan < att_unlimited_choice) && (att_family_plan < verizon_unlimited) && (att_family_plan < sprint_unlimited) && (att_family_plan < sprint_2g)) {
