@@ -22,7 +22,7 @@ class Book {
         string GetAuthor() const;               //accessor
         int GetCopyright() const;               //accessor
         
-        void PrintData();                       //accessor (print function)
+        void PrintData();                       //accessor (includes print function)
     private:
         string title;                           //private object variables
         string author;
