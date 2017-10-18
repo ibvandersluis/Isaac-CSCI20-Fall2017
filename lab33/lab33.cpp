@@ -21,30 +21,30 @@ int main() {
 
     cout << "Are you ready, human?" << endl;
     
-    for (i = 10; i > 0; --i) {
+    for (i = 10; i > 0; --i) {          //counts down from 10..1
         cout << i << "..." << endl;
     }
     
-    cout << "Guess a number between 1 and 50: " << endl;
+    cout << "Guess a number between 1 and 50: " << endl; //prompting user for input
     cin >> user_num;
     
-    while (user_num != guess_num) {
-        if ((user_num > 0) && (user_num < guess_num)) {
+    while (user_num != guess_num) {                      //if initial guess isn't correct...
+        if ((user_num > 0) && (user_num < guess_num)) {  //notifies user if guess is too low, gets new guess
             cout << "Too Low" << endl;
             cout << "Guess again: " << endl;
             cin >> user_num;
-        } else if ((user_num < 51) && (user_num > guess_num)) {
+        } else if ((user_num < 51) && (user_num > guess_num)) {  //notifies user if guess is too high, gets new guess
             cout << "Too High" << endl;
             cout << "Guess again: " << endl;
             cin >> user_num;
-        } else {
+        } else {                                         //error message if guess is outside of range
             cout << "ERROR: Invalid value" << endl;
             cout << "Guess again: " << endl;
             cin >> user_num;
         }
     }
     
-    cout << "Just Right" << endl;
+    cout << "Just Right" << endl;                        //Notifies user that they have guessed correctly and the game is over
     cout << "GAME OVER";
     
     return 0;
