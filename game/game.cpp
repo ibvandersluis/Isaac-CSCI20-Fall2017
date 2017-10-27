@@ -216,4 +216,126 @@ S
 Take 2 Cherries
 Good Game! You Won!
 
+Let's play Hi Ho! Cherry-O.
+You each have 9 cherries on your tree.
+Take turns spinning. Whoever removes all the cherries from their tree first wins.
+It's your turn!
+Press 'S' to spin!
+s
+Bird
+It's the computer's turn!
+Spilled Basket
+It's your turn!
+Press 'S' to spin!
+s
+Take 4 Cherries
+Dog
+It's the computer's turn!
+Take 2 Cherries
+It's your turn!
+Press 'S' to spin!
+s
+Dog
+It's the computer's turn!
+Take 1 Cherry
+It's your turn!
+Press 'S' to spin!
+s
+Dog
+It's the computer's turn!
+Take 3 Cherries
+It's your turn!
+Press 'S' to spin!
+s
+Take 1 Cherry
+It's the computer's turn!
+Spilled Basket
+It's your turn!
+Press 'S' to spin!
+s
+Take 1 Cherry
+It's the computer's turn!
+Take 1 Cherry
+It's your turn!
+Press 'S' to spin!
+s
+Bird
+It's the computer's turn!
+Spilled Basket
+It's your turn!
+Press 'S' to spin!
+s
+Spilled Basket
+It's the computer's turn!
+Take 4 Cherries
+It's your turn!
+Press 'S' to spin!
+s
+Take 4 Cherries
+Dog
+It's the computer's turn!
+Take 1 Cherry
+It's your turn!
+Press 'S' to spin!
+s
+Take 4 Cherries
+Dog
+It's the computer's turn!
+Dog
+It's your turn!
+Press 'S' to spin!
+s
+Dog
+It's the computer's turn!
+Dog
+It's your turn!
+Press 'S' to spin!
+s
+Take 3 Cherries
+It's the computer's turn!
+Bird
+It's your turn!
+Press 'S' to spin!
+s
+Dog
+It's the computer's turn!
+Take 1 Cherry
+It's your turn!
+Press 'S' to spin!
+s
+Bird
+It's the computer's turn!
+Take 2 Cherries
+It's your turn!
+Press 'S' to spin!
+s
+Take 1 Cherry
+It's the computer's turn!
+Take 1 Cherry
+It's your turn!
+Press 'S' to spin!
+S
+Spilled Basket
+It's the computer's turn!
+Bird
+It's your turn!
+Press 'S' to spin!
+s
+Take 1 Cherry
+It's the computer's turn!
+Take 1 Cherry
+It's your turn!
+Press 'S' to spin!
+s
+Take 1 Cherry
+It's the computer's turn!
+Take 3 Cherries
+It's your turn!
+Press 'S' to spin!
+s
+Take 2 Cherries
+It's the computer's turn!
+Take 3 Cherries
+The Computer Won. Good Game!
+
 */
