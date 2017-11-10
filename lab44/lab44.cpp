@@ -86,3 +86,45 @@ int main() {
     
     return 0;
 }
+
+/*
+
+Enter your first name: 
+Isaac
+Enter your last name: 
+Vander Sluis
+
+Your username options are: 
+isaacvandersluis
+ivandersluis
+isaacv
+
+
+Enter your first name: 
+April       
+Enter your last name: 
+Browne
+
+Your username options are: 
+aprilbrowne
+abrowne
+aprilb
+
+
+Enter your first name: 
+AnaElizabeth
+ERROR: exceeds maximum size. Try again: 
+
+
+Enter your first name: 
+James 
+Enter your last name: 
+James
+WARNING: first name matches last name.
+
+Your username options are: 
+jamesjames
+jjames
+jamesj
+
+*/
