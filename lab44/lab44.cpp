@@ -25,6 +25,18 @@ void MakeLower(char string[]) {
     return;
 }
 
+//This function takes a character array as input and prints each element, sans whitespace
+void PrintString(char string[]) {
+    for (int i = 0; i < strlen(string); i++) {
+        if (isspace(string[i]) == 0) {
+            cout << string[i];
+        }
+    }
+    cout << endl;
+    
+    return;
+}
+
 int main() {
     const int STR_MAX = 30;             //Character arrays are hard-coded to allow 29 characters, but if-else branches will functionally limit this further.
     char first_name[STR_MAX] = "";      //Initializes character array to store first name
@@ -42,12 +54,13 @@ int main() {
         cin >> first_name;
     }
     
+    cin.ignore(1);
     cout << "Enter your last name: " << endl;       //Prompts user for last name
-    cin >> last_name;
+    cin.getline(last_name, STR_MAX);
     
     while (strlen(last_name) > 20) {                //Prompts user to re-enter last name if it is too long
         cout << "ERROR: excees maximum size. Try again: " << endl;
-        cin >> last_name;
+        cin.getline(last_name, STR_MAX);
     }
     
     if (strcmp(first_name, last_name) == 0) {       //Prints warning to user if first name matches last name
@@ -67,9 +80,9 @@ int main() {
     MakeLower(option3);
     
     cout << endl << "Your username options are: " << endl;  //Prints options to the user
-    cout << "-" << option1 << endl;
-    cout << "-" << option2 << endl;
-    cout << "-" << option3 << endl;
+    PrintString(option1);
+    PrintString(option2);
+    PrintString(option3);
     
     return 0;
 }
