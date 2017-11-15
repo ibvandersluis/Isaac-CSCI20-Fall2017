@@ -49,18 +49,16 @@ int main() {
     cout << "Enter your first name: " << endl;      //Prompts user for first name
     cin >> first_name;
     
-    while (strlen(first_name) > 10) {               //Prompts user to re-enter first name if it is too long
-        cout << "ERROR: exceeds maximum size. Try again: " << endl;
-        cin >> first_name;
+    if (strlen(first_name) > 10) {                  //Prints warning if first name is too long
+        cout << "WARNING: exceeds maximum size." << endl;
     }
     
     cin.ignore(1);
     cout << "Enter your last name: " << endl;       //Prompts user for last name
     cin.getline(last_name, STR_MAX);
     
-    while (strlen(last_name) > 20) {                //Prompts user to re-enter last name if it is too long
-        cout << "ERROR: excees maximum size. Try again: " << endl;
-        cin.getline(last_name, STR_MAX);
+    if (strlen(last_name) > 20) {                   //Prints warning if last name is too long
+        cout << "WARNING: excees maximum size." << endl;
     }
     
     if (strcmp(first_name, last_name) == 0) {       //Prints warning to user if first name matches last name
@@ -113,7 +111,14 @@ aprilb
 
 Enter your first name: 
 AnaElizabeth
-ERROR: exceeds maximum size. Try again: 
+WARNING: exceeds maximum size.
+Enter your last name: 
+Hazeltine-Smith
+
+Your username options are: 
+anaelizabethhazeltine-smith
+ahazeltine-smith
+anaelizabethh 
 
 
 Enter your first name: 
