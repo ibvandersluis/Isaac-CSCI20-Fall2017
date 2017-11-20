@@ -1,0 +1,21 @@
+Suzy Cue
+4
+3 A
+3 A
+3 A
+3 B
+
+Joe Joseph
+4
+4 D
+3 C
+3 B
+3 C
+
+Jillian Smith
+5
+4 C
+3 C
+4 C
+3 B
+3 C
