@@ -18,38 +18,40 @@ the user.
 using namespace std;
 
 int main() {
-    ifstream inFS;
+    ifstream inFS;                  //initialize file input/output variables
     ofstream outFS;
-    string file_name = "";
+    string file_name = "";          //initialize variables for info about the student and the file
     string first_name = "";
     string last_name = "";
     int num_classes = 0;
     char grade = ' ';
-    int class_hours = 0.0;
+    int class_hours = 0;
+    int total_units = 0;
+    double grade_points = 0.0;
     double sem_gpa = 0.0;
-    double ovr_gpa = 0.0;
     
-    cout << "Enter file name for inport:" << endl;
+    cout << "Enter file name for inport:" << endl;      //prompt user for file to read
     cin >> file_name;
-    cin.ignore();
     
-    cout << "Opening " << file_name << endl;
+    cout << "Opening " << file_name << endl;            //opens file and an html file for output
     inFS.open(file_name);
     outFS.open("output.html");
-    if (!inFS.is_open()) {
+    if (!inFS.is_open()) {                              //prints error if file won't open
         cout << "Could not open file " << file_name << endl;
         return 1;
     }
     
-    outFS << "<!DOCTYPE html>" << endl;
+    outFS << "<!DOCTYPE html>" << endl;                 //prints basic structure for html file
     outFS << "<html>" << endl;
     outFS << "<head>" << endl;
     outFS << "<title>Student Transcript</title>" << endl;
     outFS << "</head>" << endl;
     outFS << "<body>" << endl;
-    outFS << "<h1>Student Transcript</h1>";
+    outFS << "<h1>Student Transcript</h1>" << endl;
     
-    while (!inFS.eof()) {
+    outFS << setprecision(2) << fixed;                  //limit numbers to 2 digits after decimal point, for use with GPA
+    
+    while (!inFS.eof()) {                               //iterates through file, taking in student info
         sem_gpa = 0.0;
         inFS >> first_name;
         inFS >> last_name;
@@ -61,41 +63,42 @@ int main() {
             inFS >> class_hours;
             inFS >> grade;
             
-            switch (grade) {
+            switch (grade) {                            //determines number of grade points to add to student's running total
                 case 'A':
                 case 'a':
-                    sem_gpa += 4.0;
+                    grade_points += 4.0 * class_hours;
                     break;
                 case 'B':
                 case 'b':
-                    sem_gpa += 3.0;
+                    grade_points += 3.0 * class_hours;
                     break;
                 case 'C':
                 case 'c':
-                    sem_gpa += 2.0;
+                    grade_points += 2.0 * class_hours;
                     break;
                 case 'D':
                 case 'd':
-                    sem_gpa += 1.0;
+                    grade_points += 1.0 * class_hours;
                     break;
                 case 'F':
                 case 'f':
-                    sem_gpa += 0.0;
+                    grade_points += 0.0;
                     break;
                 default:
                     outFS << "ERROR" << endl;
             }
+            total_units += class_hours;                 //adds units for current class to running total of student's units
         }
-        
-        outFS << "<p>Semester GPA: " << sem_gpa / num_classes << "</p>" <<endl;
+        sem_gpa = grade_points / total_units;           //output GPA by calculating grade points divided by number of units
+        outFS << "<p>Semester GPA: " << sem_gpa << "</p>" <<endl;
     }
     
-    outFS << "</body>" << endl;
+    outFS << "</body>" << endl;                         //wrap up html file
     outFS << "</html>" << endl;
     
     cout << "Closing " << file_name << endl;
     
-    inFS.close();
+    inFS.close();                                       //close files
     outFS.close();
     
     return 0;
@@ -109,14 +112,15 @@ int main() {
 <title>Student Transcript</title>
 </head>
 <body>
-<h1>Student Transcript</h1><h3>Student: Suzy Cue</h3>
+<h1>Student Transcript</h1>
+<h3>Student: Suzy Cue</h3>
 <p>Semester GPA: 3.75</p>
 <h3>Student: Joe Joseph</h3>
-<p>Semester GPA: 2</p>
+<p>Semester GPA: 2.80</p>
 <h3>Student: Jillian Smith</h3>
-<p>Semester GPA: 2.2</p>
+<p>Semester GPA: 2.55</p>
 <h3>Student: Jillian Smith</h3>
-<p>Semester GPA: 2</p>
+<p>Semester GPA: 2.40</p>
 </body>
 </html>
 
