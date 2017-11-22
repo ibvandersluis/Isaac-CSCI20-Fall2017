@@ -106,6 +106,13 @@ int main() {
 
 /*
 
+Enter file name for inport:
+test_input.txt
+Opening test_input.txt
+Closing test_input.txt
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
