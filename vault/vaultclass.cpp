@@ -121,12 +121,12 @@ string Vault::RandPass() {
     return generate;
 }
 
-void Vault::VaultOut() {
-    output_.open(outfile_);
-    output_ << setw(20) << left << "Service" << "|";
-    output_ << right << "Password" << endl;
-    output_ << setfill('-') << setw(41) << "" << endl;
-    output_ << setw(20) << left << setfill(" ");
+void Vault::VaultOut(ofstream output) {
+    output.open(outfile_);
+    output << setw(20) << left << "Service" << "|";
+    output << right << "Password" << endl;
+    output << setfill('-') << setw(41) << "" << endl;
+    output << setw(20) << left << setfill(" ");
     for (int i = 0; i < 100; i++) {
         if ((service_names_[i].empty() != true) && (passwords_[i].empty() != true)) {
             output_ << service_names_[i] << "|" << right << passwords_[i] << endl;
@@ -135,32 +135,32 @@ void Vault::VaultOut() {
     output_.close();
 }
 
-void Vault::Save() {
-    save_.open(savefile_);
-    save_ << username_ << endl;
-    save_ << masterpass_ << endl;
-    save_ << j_ << endl;
+void Vault::Save(ofsteam save) {
+    save.open(savefile_);
+    save << username_ << endl;
+    save << masterpass_ << endl;
+    save << j_ << endl;
     for (int i = 0; i < j_; i++) {
-        save_ << passwords_[i] << endl;
+        save << passwords_[i] << endl;
     }
     for (int i = 0; i < j_; i++) {
-        save_ << service_names_[i] << endl;
+        save << service_names_[i] << endl;
     }
-    save_.close();
+    save.close();
     return;
 }
 
-void Vault::Import() {
-    input_.open(savefile_);
-    input_ >> username_;
-    input_ >> masterpass_;
-    input_ >> j_;
+void Vault::Import(ifstream input) {
+    input.open(savefile_);
+    input >> username_;
+    input >> masterpass_;
+    input >> j_;
     for (int i = 0; i < j_; i++) {
         input_ >> passwords_[i];
     }
     for (int i = 0; i < j_; i++) {
         input_ >> service_names_[i];
     }
-    input_.close();
+    input.close();
     return;
 }

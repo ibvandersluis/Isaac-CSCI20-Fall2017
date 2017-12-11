@@ -37,9 +37,9 @@ class Vault {
         // const ofstream GetSaveput();
         
         string RandPass();
-        void VaultOut();
-        void Save();
-        void Import();
+        void VaultOut(ofsteam output);
+        void Save(ofstream save);
+        void Import(ifsteam input);
     private:
         string username_;
         string masterpass_;
@@ -48,7 +48,7 @@ class Vault {
         int j_;
         string savefile_;
         string outfile_;
-        ifstream input_;
-        ofstream output_;
-        ofstream save_;
+        // ifstream input_;
+        // ofstream output_;
+        // ofstream save_;
 };

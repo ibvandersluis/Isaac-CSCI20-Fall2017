@@ -11,7 +11,7 @@ This program...
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
-#include "vaultclass.h"
 using namespace std;
+#include "vaultclass.h"
 
 string MakeLower(string str);
