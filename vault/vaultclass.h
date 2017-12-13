@@ -5,14 +5,13 @@
 #include <fstream>
 #include <cstdlib>
 #include <ctime>
-#include <fstream>
 using namespace std;
 
 
 class Vault {
     public:
         Vault();
-        ~Vault();
+        //~Vault();
         
         void SetUsername(string username);
         void SetMaster(string password);
@@ -21,9 +20,9 @@ class Vault {
         void SetSavefile(string filename);
         void SetOutfile(string filename);
         void SetJ(int j);
-        // void SetInput(ifstream iovar);
-        // void SetOutput(ofstream iovar);
-        // void SetSave(ofstream iovar);
+        //  void SetInput(ifstream iovar);
+        //  void SetOutput(ofstream iovar);
+        //  void SetSave(ofstream iovar);
         
         const string GetUsername();
         const string GetMaster();
@@ -32,14 +31,14 @@ class Vault {
         const string GetSavefile();
         const string GetOutfile();
         const int GetJ();
-        // const ifstream GetInput();
-        // const ofstream GetOutput();
-        // const ofstream GetSaveput();
+        //  const ifstream GetInput();
+        //  const ofstream GetOutput();
+        //  const ofstream GetSaveput();
         
         string RandPass();
-        void VaultOut(ofsteam output);
-        void Save(ofstream save);
-        void Import(ifsteam input);
+        // void VaultOut(std::ofstream output);
+        // void Save(std::ofstream save);
+        // void Import(std::ifstream input);
     private:
         string username_;
         string masterpass_;
@@ -48,7 +47,7 @@ class Vault {
         int j_;
         string savefile_;
         string outfile_;
-        // ifstream input_;
-        // ofstream output_;
-        // ofstream save_;
+        //  ifstream input_;
+        //  ofstream output_;
+        //  ofstream save_;
 };

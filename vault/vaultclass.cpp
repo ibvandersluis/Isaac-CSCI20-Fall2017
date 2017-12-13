@@ -97,6 +97,10 @@ const string Vault::GetSavefile() {
     return savefile_;
 }
 
+const string Vault::GetOutfile() {
+    return outfile_;
+}
+
 // const ifstream& Vault::GetInput() {
 //     return &input_;
 // }
@@ -121,45 +125,50 @@ string Vault::RandPass() {
     return generate;
 }
 
-void Vault::VaultOut(ofstream output) {
+void Vault::VaultOut(std::ofstream output) {
     output.open(outfile_);
     output << setw(20) << left << "Service" << "|";
     output << right << "Password" << endl;
     output << setfill('-') << setw(41) << "" << endl;
-    output << setw(20) << left << setfill(" ");
+    output << setw(20) << setfill(" ");
     for (int i = 0; i < 100; i++) {
-        if ((service_names_[i].empty() != true) && (passwords_[i].empty() != true)) {
-            output_ << service_names_[i] << "|" << right << passwords_[i] << endl;
+        if ((vault1.GetServiceName(i).empty() != true) && (vault1.GetUsername(i).empty() != true)) {
+            output << left << vault1.GetServiceName(i) << "|" << right << vault1.GetPassword(i) << endl;
         }
     }
-    output_.close();
+    output.close();
 }
 
-void Vault::Save(ofsteam save) {
-    save.open(savefile_);
-    save << username_ << endl;
-    save << masterpass_ << endl;
-    save << j_ << endl;
-    for (int i = 0; i < j_; i++) {
-        save << passwords_[i] << endl;
+void Vault::Save(std::ofstream save) {
+    save.open(vault1.GetSavefile());
+    save << vault1.GetUsername() << endl;
+    save << vault1.GetMaster() << endl;
+    save << vault1.GetJ() << endl;
+    for (int i = 0; i < vault1.GetJ(); i++) {
+        save << vault1.GetPassword(i) << endl;
     }
-    for (int i = 0; i < j_; i++) {
-        save << service_names_[i] << endl;
+    for (int i = 0; i < vault1.GetJ(); i++) {
+        save << vault1.GetServiceName(i) << endl;
     }
     save.close();
     return;
 }
 
-void Vault::Import(ifstream input) {
-    input.open(savefile_);
-    input >> username_;
-    input >> masterpass_;
-    input >> j_;
-    for (int i = 0; i < j_; i++) {
-        input_ >> passwords_[i];
+void Vault::Import(std::ifstream input) {
+    input.open(vault1.GetSavefile());
+    input >> usr_input;
+    vault1.SetUsername(usr_input);
+    input >> usr_input;
+    vault1.SetMaster(usr_input);
+    input >> usr_input;
+    vault1.SetJ(usr_input);
+    for (int i = 0; i < vault1.GetJ(); i++) {
+        input >> usr_input;
+        vault1.SetPassword(i, usr_input);
     }
-    for (int i = 0; i < j_; i++) {
-        input_ >> service_names_[i];
+    for (int i = 0; i < vault1.GetJ(); i++) {
+        input >> usr_input;
+        vault1.SetServiceName(i, usr_input);
     }
     input.close();
     return;
